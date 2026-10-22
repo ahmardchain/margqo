@@ -7,7 +7,7 @@
 - **Project name:** Margqo
 - **Tagline:** Know your distance. Save your position.
 - **Repo:** https://github.com/ahmardchain/margqo
-- **Live demo:** _(add Vercel URL after Ahmard imports the repo — see blockers)_
+- **Live demo:** https://margqo.vercel.app/ (verified live 2026-10-22 — homepage 200, /api/markets returns live Strike mainnet data for 32 markets, /api/analyze verified end-to-end, /api/positions honest 501 as designed)
 - **Description (short):**
   Margqo is a liquidation-distance guardian for Strike Finance perpetuals. Strike shows traders a liquidation price; Margqo turns it into what actually matters — distance to liquidation in %, a health score, hourly/daily funding bleed at Strike's live funding rate, and a priced rescue plan: add exactly $X of margin or cut exactly Y% of size to get back to a target distance. All market data (markets, margin tiers, mark prices, funding) is fetched live from Strike's mainnet API, and the liquidation math mirrors Strike's official builder-reference formulas.
 - **How it integrates Strike (meaningful integration):**
@@ -30,7 +30,7 @@
 - [x] Unit tests pass (10/10), production build green, prod-server smoke test done
 - [x] Public GitHub repo pushed and verified
 - [x] README with live-vs-demo honesty table and judge verification steps
-- [ ] Live demo URL (Vercel import — Ahmard's gate, see below)
+- [x] Live demo URL — https://margqo.vercel.app/ (Ahmard imported via GitHub connection; verified live 2026-10-22)
 - [ ] Demo video recorded (script above)
 - [ ] Submission form submitted before Fri Oct 23, 15:00 WAT (form link pending from Strike)
 
@@ -38,5 +38,5 @@
 
 1. **Submission form:** the Medium article listed it as "Coming Soon" — join/check Strike's Discord and official channels for the live form, then submit with the copy above.
 2. **Demo video:** record the 2.5-min script (screen + voice).
-3. **Vercel:** import `github.com/ahmardchain/margqo` once at vercel.com/new (project creation via the connector is blocked on his team grant — same as Turno/Rateqo). No env vars required for the live public-API features.
+3. **Vercel:** DONE — https://margqo.vercel.app/ live and verified 2026-10-22.
 4. **Optional:** if he wants authenticated position import demoed, create a Strike API wallet via the builder-connect flow and set `STRIKE_API_WALLET_*` in his own deployment env — never share the secret key.
