@@ -26,7 +26,7 @@ The Strike ecosystem already has a dashboard/activity tracker (Hizz), copy tradi
 | Liquidation / IM / MM / funding math | **Real** — mirrors Strike's official `strike-builder-reference` formulas |
 | Your position | **You enter it** (symbol / side / size / entry / margin). Preset buttons are clearly labelled DEMO positions. Margqo holds no keys and places no trades. |
 | Authenticated position import | **Env-gated, honest 501** — Strike's `GET /v2/positions` requires the user's own API wallet (Ed25519 headers from the builder-connect flow). `GET /api/positions` returns 501 until `STRIKE_API_WALLET_*` is set. No fabricated account data anywhere. |
-| Testnet (`api-v2-testnet.strikefinance.org`) | Probed 2026-10-22: timed out (HTTP 000). Mainnet public API is the live integration surface. |
+| Testnet (`api-v2-testnet.strikefinance.org`) | Probed 2026-10-22: intermittent — `/v2/time` timed out but `/v2/markets` responded once. Mainnet public API is the live integration surface. |
 
 Full integration notes: [`docs/STRIKE_INTEGRATION.md`](docs/STRIKE_INTEGRATION.md).
 

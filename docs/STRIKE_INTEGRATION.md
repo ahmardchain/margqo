@@ -25,7 +25,7 @@ Researched and verified live on **2026-10-22** (during the hackathon window).
 | `GET …/price/v2/klines?symbol=ADA-USD&interval=1h` | 200 kline arrays | client included, not surfaced in MVP UI |
 | `GET …/v2/positions` (no auth) | **401** `{"error":"authentication required or provide vault_id, account_id, or blockchain_address"}` | proves account data is auth-gated — Margqo does not fake it |
 | `GET …/stat/v1/leaderboard` | 404 at the guessed path — **not used** (path unverified; the builder reference says the stats service exists at `/stat` but does not give this route) | — |
-| Testnet `https://api-v2-testnet.strikefinance.org/v2/time` + `/v2/markets` | timed out (HTTP 000) at probe time | mainnet is the integration surface |
+| Testnet `https://api-v2-testnet.strikefinance.org/v2/time` + `/v2/markets` | intermittent at probe time — `/v2/time` timed out (HTTP 000) but `/v2/markets` responded once with ADA-USD testnet data at probe time | mainnet is the integration surface |
 
 WebSockets documented in the builder reference (not used in MVP): `wss://api.strikefinance.org/ws/price` (public market data), `wss://api.strikefinance.org/ws/user-api` (API-wallet user stream).
 
